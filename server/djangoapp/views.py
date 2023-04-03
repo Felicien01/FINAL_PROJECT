@@ -15,22 +15,18 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-def simple_view(request):
-    context = {}
-    if (request.method == "GET"):
-        return render(request,'template',context)
 
 # Create an `about` view to render a static about page
 def about(request):
     context = {}
-    if (request.method == "GET"):
-        return render(request,'djangoapp/about',context)
+    if request.method == 'GET':
+        return render(request, 'djangoapp/about.html', context)
 
 
 def contact(request):
     context = {}
-    if (request.method == "GET"):
-        return render(request,'djangoapp/contact',context)
+    if request.method == 'GET':
+        return render(request, 'djangoapp/contact.html', context)
 # Create a `login_request` view to handle sign in request
 # def login_request(request):
 # ...
